@@ -17,7 +17,7 @@ def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
         else:
             name = req_body.get('name')
 
-    response = requests.get('https://api.github.com/users')
+    response = requests.get('https://burntlettuce.azurewebsites.net/api/http_trigger1?code=nB4JIZZcCKVj6gfNqF1gh5iaDe88iZ34NMBTvPEIEY7pAzFu_2zGrg%3D%3D')
 
     if response:
         return func.HttpResponse(f"Hello, {response.json()}. This HTTP triggered function executed successfully.")
